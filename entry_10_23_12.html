@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<link rel="stylesheet" type="text/css" href="css/style.css?v=1">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script type="text/javascript" src="/lib/d3.v3.js"></script>
+  <body>
+    <script type="text/javascript">
+
+      var mouse = [480,250],
+          current = [480,250],
+          color = ['#31a354', '#74c476', '#a1d99b', '#c7e9c0','#3182bd', '#6baed6', '#9ecae1', '#c6dbef', '#756bb1', '#9e9ac8', '#bcbddc', '#dadaeb', '#636363', '#969696', '#bdbdbd', '#d9d9d9'],
+          count = 0,
+          i = 0,
+          xRate = 0,
+          yRate = 0
+          baseRate = 3.5;
+
+      var svg = d3.select('body').append('svg')
+        .attr('width',960)
+        .attr('height',500)
+        .on('mousemove', updateLocation);
+
+
+      function updateLocation() {
+        mouse = [d3.event.x,d3.event.y];
+      }
+
+
+      function move() {
+        xRate = mouse[0] - current[0];
+        yRate = mouse[1] - current[1];
+
+        if (Math.abs(xRate) == Math.abs(yRate)) {
+          xRate = baseRate;
+          yRate = baseRate;
+        }
+        else {
+          if(Math.abs(xRate) > Math.abs(yRate)) { 
+            yRate = baseRate * yRate/Math.abs(xRate);
+            xRate = xRate > 0 ? baseRate : -baseRate;
+          }
+          else {
+            xRate = baseRate * xRate/Math.abs(yRate);
+            yRate = yRate > 0 ? baseRate : -baseRate;
+          }
+        }
+
+        current[0] += xRate;
+        current[1] += yRate;
+
+      }
+
+      function tunnel() {
+
+          d3.select('svg').append('circle')
+            .attr('cx', Math.round(current[0]))
+            .attr('cy', Math.round(current[1]))
+            .style('fill', color[i++ % 16])
+            .attr('r', 0)
+          .transition()
+            .duration(9000)
+            .attr('r', 960)
+            .remove();
+
+          move();
+          setTimeout(tunnel, 300 * (1 + baseRate/11));
+      };
+
+      tunnel();
+    </script>
+  
+  </body>
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37325539-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

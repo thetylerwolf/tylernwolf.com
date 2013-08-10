@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "date":"7/19/13",
+      "title":"HSL Color Picker",
+      "description": "An HSL colorpicker built in D3.",
+      "url":"/entry_7_19_13.html"
+    },
+    {
+      "date":"10/23/12",
+      "title":"Happy Worm",
+      "description": "An experiment in sensory integration.",
+      "url":"/entry_10_23_12.html"
+    },
+    {
+      "date":"10/12/12",
+      "title":"Leader-board",
+      "description": "A leaderboard designed to update with incoming data.",
+      "url":"/entry_10_12_12.html"
+    }
+  ]
+}

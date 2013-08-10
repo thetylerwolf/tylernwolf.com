@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css?v=1">  
+    <style>
+
+    svg text {
+    	font: 30px sans-serif;
+    	font-weight:bold;
+    	pointer-events:none;
+    	font-family:Verdana;
+    }
+
+    .button:hover {
+    	opacity:0.7;
+    }
+
+    #title {
+    	font: 50px sans-serif;
+    	text-align: center;
+    	font-weight:bold;
+    	margin-bottom:-70px;
+    	height:100px;
+    }
+
+    </style>
+
+    <script type="text/javascript" src="/lib/d3.v3.js"></script>
+
+    <body>
+      <div id="leaderboard"></div>
+    </body>
+
+<script>
+
+var d = [],
+	data = [],
+	leaders = 10,
+	iColor = []
+	bColor = [];
+
+for (i = 0; i < 15 ; i++) {
+	d = d.concat(c(i));
+}
+
+function c(i) {
+	return {
+		label: "Competitor " + i,
+		value: (Math.random() * 100).toFixed(2)
+	};
+}
+
+function color(i) {
+	var color = ["goldenrod","silver","chocolate"];
+	if (color[i])
+		return color[i];
+	else return 0;
+}
+
+function indColor() {
+	for(j=0; j<d.length; j++) {
+		if(!iColor[d[j].label])
+			iColor[d[j].label] = "hsl(" + j * 360/20 + ",60% " + ",40% )";
+	}
+}
+
+function borColor() {
+	for(j=0; j<d.length; j++) {
+		if(!bColor[d[j].label])
+			bColor[d[j].label] = "hsl(" + j * 360/20 + ",90% " + ",40% )";
+	}
+}
+
+borColor();
+indColor();
+
+var	tops = d.sort(function(a, b) { return b.value - a.value;}).slice(0,leaders);
+
+
+var margin = {top: 100, right: 40, bottom:10, left:40},
+	width = window.innerWidth - margin.left - margin.right,
+	height = window.innerHeight - margin.top - margin.bottom - 100;
+
+var x = d3.scale.linear()
+		.domain([0, d3.max(data)])
+		.rangeRound([0,width]);
+
+var y=d3.scale.ordinal()
+	.domain(tops.map(function(d) {return d.label;}))
+	.rangeBands([0,height]);
+
+var list = d3.select("#leaderboard").append("svg")
+    .attr("class", "list")
+    .attr("width", width)
+    .attr("height", height + margin.top + margin.bottom);
+
+//===========DRAW===============================================
+//===========DRAW===============================================
+
+list.selectAll("rect")
+    .data(tops,(function(d) {return d.label;}))
+  .enter().append("rect")
+  	.attr("x", margin.left)
+    .attr("y", function(d) {return margin.top +y(d.label);})
+    .attr("rx", 5)
+	.attr("ry",5)
+    .attr("width", width - margin.right - 5)
+    .attr("height", function(d) {return y.rangeBand() - 6;})
+    .attr("fill", function(d,i) {return iColor[d.label]})
+    .attr("stroke", bColor[d.label]);
+
+list.selectAll(".bar")
+    .data(tops,function(d) {return d.label;})
+  .enter().append("text")
+    .attr("class", "bar")
+    .attr("x", margin.left + 10)
+    .attr("y", function(d) { return margin.top + y(d.label) + y.rangeBand() / 2; })
+    .attr("dy", ".35em")
+    .attr("text-anchor", "start")
+    .attr("fill", "white")
+    .text(function(d,i) {return i+1 + ". " + d.label;});
+
+
+//================================================================================
+//================================================================================    
+
+function redraw(newData) {
+
+
+
+	tops = newData.sort(function(a, b) { return b.value - a.value;}).slice(0,leaders);
+
+	var rect = list.selectAll("rect")
+		.data(tops,(function(d) {return d.label;}));
+
+	var text = list.selectAll(".bar")
+	    .data(tops,(function(d) {return d.label;}))
+
+	var AUM = list.selectAll(".aum")
+		.data(tops,function(d) {return d.label;})
+
+	x = d3.scale.linear()
+		.domain([0, d3.max(data)])
+		.rangeRound([0,width]);
+
+	y=d3.scale.ordinal()
+		.domain(tops.map(function(d) {return d.label;}))
+		.rangeBands([0,height]);
+
+
+	rect.enter().append("rect")
+		.attr("x", margin.left)
+		.attr("y", height + margin.top + margin.bottom)
+	    .attr("width", width - margin.right - 5)
+	    .attr("height", function(d) {return y.rangeBand() - 6;})
+	    .attr("fill", "white")
+	    .attr("stroke", "white");
+
+	rect.transition()
+		.duration(750)
+		.attr("rx", 3)
+		.attr("ry",3)
+	    .attr("y", function(d) {return margin.top + y(d.label);} )
+	    .attr("fill", function(d) {return iColor[d.label]})
+	   	.attr("stroke-width", 6)
+    	.attr("stroke", function(d,i) {return (color(i)) ? color(i) : bColor[d.label];});
+
+    rect.exit().transition()
+    	.duration(750)
+    	.attr("y", height + margin.top + margin.bottom)
+    	// .attr("stroke", "white")
+    	// .attr("fill","white")
+    	.remove();
+
+	text.enter().append("text")
+	    .attr("class", "bar")
+	    .attr("x", margin.left + 10)
+	    .attr("y", height + margin.top + margin.bottom + 20 )
+	    .attr("text-anchor", "start")
+	    .attr("fill", "white")
+	    .text(String);
+
+	text.transition()
+		.duration(750)
+		.attr("x", margin.left + 10)
+	    .attr("y", function(d) { return margin.top + y(d.label) + y.rangeBand() / 2 ; })
+	    .attr("dy", ".35em")
+	    .attr("text-anchor", "start")
+	    .attr("fill", "white")
+	    .text(function(d,i) {return i+1 + ". " + d.label;});
+
+	text.exit().transition()
+		.remove();
+//=================AUM=======================
+//=================AUM=======================
+
+	AUM.enter().append("text")
+	    .attr("class", "aum")
+	    .attr("x", margin.left + width - margin.right - 10)
+	    .attr("y", height + margin.top + margin.bottom )
+	    .attr("text-anchor", "end")
+	    .attr("fill", "white")
+	    .text(String);
+
+	AUM.transition()
+		.duration(750)
+		.attr("x", margin.left + width - 55)
+	    .attr("y", function(d) { return margin.top + y(d.label) + y.rangeBand() / 2 ; })
+	    .attr("dy", ".35em")
+	    .attr("text-anchor", "end")
+	    .attr("fill", "white")
+	    .text(function(d,i) {return "Score: " + d.value;});
+
+	AUM.exit().transition()
+		.remove();
+
+}
+
+setInterval(function() {
+	//d = [];
+for (i = 0; i < 15 ; i++) {
+	d[i].value = (parseFloat(d[i].value) + Math.random()*100).toFixed(2);
+}
+indColor();
+redraw(d);
+}, 2000);
+
+</script>
+
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37325539-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>
