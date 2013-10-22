@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date":"8/9/13",
+      "title":"Color Calendar",
+      "description": "A color calendar that fills in as time passes. Inspired by 'A Colorful New Year', a poster by Niklaus Troxler. This is a work in progress! Best viewed with a large window size.",
+      "url":"/entry_8_9_13.html"
+    },
+    {
       "date":"7/19/13",
       "title":"HSL Color Picker",
       "description": "An HSL colorpicker built in D3.",

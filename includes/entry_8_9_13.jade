@@ -1,0 +1,8 @@
+include entry.jade
+
+link(rel='stylesheet', type='text/css', href='/css/grid.css?v=1')
+link(rel='stylesheet', type='text/css', href='/css/party_calendar.css?v=1')
+script(type="text/javascript", src="/js/party_calendar.js")
+script(type="text/javascript")
+  d3.select('#panel-left .entry-title').property('innerHTML','Color Calendar');
+  d3.select('#panel-left .date').property('innerHTML',new Date().toLocaleDateString());

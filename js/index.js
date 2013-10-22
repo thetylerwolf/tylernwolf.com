@@ -3,7 +3,7 @@ d3.json('/data/entries.json', function(data) {
 
   // var colors = ["#9e1010", "#9e2710", "#be8513", "#328e1f", "#20598d", "#4f1ca0"]
   var colors = ["#68B841","#D9AB27", "#C23D23", "#9E3CD9", "#2587CF", "#C22E2B"]
-  window.co = colors;
+
   //['#dbb700','#9d2810'];
 
   // var randomColor = function() { return colors[parseInt(Math.random() * colors.length)]; };

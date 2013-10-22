@@ -1,0 +1,15 @@
+.day {
+  height:25px;
+  border-width:2px;
+  box-sizing:border-box;
+}
+
+.calendar-wrap {
+  width:80%;
+  height:100%;
+  margin:30px auto;
+}
+
+#gallery-right {
+  overflow:scroll;
+}
