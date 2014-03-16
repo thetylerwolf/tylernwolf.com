@@ -1,0 +1,21 @@
+{
+  "name": "wolfderm",
+  "version": "0.0.0",
+  "authors": [
+    "Tyler Wolf <tylernicholaswolf@gmail.com>"
+  ],
+  "description": "Eric Wolf MD website",
+  "license": "MIT",
+  "homepage": "wolfderm.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}
