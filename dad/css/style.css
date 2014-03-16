@@ -1,6 +1,6 @@
 body{height:100%;width:100%;background-color:#34495e;}
 body .wolf-derm .container{height:100%;background-color:#fff}
-body .wolf-derm .page-head{position:relative;background-image:url("../img/bg1.jpg");background-size:100%;background-position:0% 40%;background-repeat:no-repeat;height:300px;width:100%;margin-left:auto;margin-right:auto;text-shadow:1px 1px 2px rgba(0,0,0,0.6);}
+body .wolf-derm .page-head{position:relative;background-image:url("../img/bg1.jpg");background-size:100%;background-repeat:no-repeat;height:300px;width:100%;margin-left:auto;margin-right:auto;text-shadow:1px 1px 2px rgba(0,0,0,0.6);}
 body .wolf-derm .page-head .headline{position:absolute;left:51%;font-size:36px}
 body .wolf-derm .white{color:#fff}
 body .wolf-derm .nav li.active a{background-color:#34495e}
