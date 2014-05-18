@@ -17,13 +17,21 @@ footer {
   left:0;
 }
 
-footer a {
+footer {
   font-size: 1.5em;
 }
 
 a {
   text-decoration:none;
   color:#fff;
+}
+
+footer a {
+  opacity: 0.7;
+}
+
+a:hover {
+  opacity: 1;
 }
 
 .main-content-container {
