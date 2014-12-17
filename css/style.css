@@ -51,8 +51,8 @@ a:hover {
 #panel-left .title,
 #panel-left .description {
   position:absolute;
-  text-align:right;
-  right:2px;
+  /*text-align:right;*/
+  left:2px;
   width:100%;
 }
 
@@ -85,15 +85,46 @@ a:hover {
   position:relative;
   width:100%;
   background-color:#262626;
-  height:20%;
+  height:15%;
   overflow:hidden;
-  text-align:right;
-  font-size:3em;
+  /*text-align:right;*/
+  font-size:2em;
   opacity:0.9;
+  display:block;
+  transition:color;
 }
 
 #gallery-right .gallery-inner .entry:hover {
   opacity:1;
+  -webkit-animation-duration:0.25s;
+  -webkit-animation-name:colorful;
+  -webkit-animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes colorful {
+  from {
+    color:#C22E2B;
+  }
+
+  20% {
+    color:#C23D23;
+  }
+
+  40% {
+    color:#D9AB27;
+  }
+
+  60% {
+    color:#68B841;
+  }
+
+  80% {
+    color:#2587CF;
+  }
+
+  to {
+    color:#9E3CD9;
+  }
 }
 
 .entry .entry-date {

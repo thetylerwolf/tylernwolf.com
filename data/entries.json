@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "date": "12/2/14",
+      "title": "Data Generator Sketch Plugin",
+      "description": "A plugin for Sketch that generates dummy data and charts",
+      "url":"https://github.com/thetylerwolf/sketchfindatagen"
+    },
+    {
       "date":"8/9/13",
       "title":"Color Calendar",
       "description": "A color calendar that fills in as time passes. Inspired by 'A Colorful New Year', a poster by Niklaus Troxler. This is a work in progress! Best viewed with a large window size.",
