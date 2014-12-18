@@ -7,6 +7,12 @@
       "url":"https://github.com/thetylerwolf/sketchfindatagen"
     },
     {
+      "date": "2/22/14",
+      "title": "Jade/Stylus Bootstrap",
+      "description": "Gruntfile and npm package to get a jade/stylus-based project up and running",
+      "url":"https://github.com/thetylerwolf/sketchfindatagen"
+    },
+    {
       "date":"8/9/13",
       "title":"Color Calendar",
       "description": "A color calendar that fills in as time passes. Inspired by 'A Colorful New Year', a poster by Niklaus Troxler. This is a work in progress! Best viewed with a large window size.",
@@ -26,7 +32,7 @@
     },
     {
       "date":"10/12/12",
-      "title":"Leader-board",
+      "title":"Leaderboard",
       "description": "A leaderboard designed to update with incoming data.",
       "url":"/entry_10_12_12.html"
     }

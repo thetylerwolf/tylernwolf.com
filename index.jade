@@ -4,23 +4,24 @@ body
   div.main-content-container
     div#panel-left
       div.title
-        a(href="http://www.tylernwolf.com") Tyler
-        br
-        | Wolf
+        a(href="http://www.tylernwolf.com") Tyler Wolf
       div.description
         div.entry-title
         div.date
         div.explanation
-      footer
-        a(href="http://about.me/tylerwolf", target="_blank") contact
-        &nbsp; / &nbsp;
-        a(href="http://blog.tylernwolf.com", target="_blank") blog
     div#gallery-right
       div.gallery-inner
+        .entry.title
+          | Projects
+        .links
+        .contact-info
+            a(href="http://about.me/tylerwolf", target="_blank") contact
+            &nbsp;&nbsp;
+            a(href="http://blog.tylernwolf.com", target="_blank") creative blog
 
 script(type="text/javascript", src="/js/index.js")
 
-script(type="text/javascript")
+script(type="text/javascript").
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37325539-1']);
   _gaq.push(['_trackPageview']);

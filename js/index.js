@@ -1,29 +1,7 @@
 d3.json('/data/entries.json', function(data) {
   var entries = data.entries;
 
-  // var colors = ["#9e1010", "#9e2710", "#be8513", "#328e1f", "#20598d", "#4f1ca0"]
-  var colors = ["#68B841","#D9AB27", "#C23D23", "#9E3CD9", "#2587CF", "#C22E2B"]
-
-  // var randomColor = function() { return colors[parseInt(Math.random() * colors.length)]; };
-
-  // var randomGradient = function() {
-  //   var a = parseInt(Math.random()),
-  //       b = parseInt(Math.random());
-
-  //   while(Math.abs(a - b) < 2) {
-  //       a = parseInt(Math.random());
-  //   }
-
-  //   return [colors[a], colors[b]];
-  // }
-
-  // var colorScale = d3.scale.linear().domain([0,entries.length - 1]).range(randomGradient());
-
-  d3.shuffle(colors);
-
-  var colorScale = function(i) { return colors[i]; }
-
-  var slider = d3.select('#gallery-right .gallery-inner');
+  var slider = d3.select('#gallery-right .gallery-inner .links');
 
   var entryRect = slider.selectAll('a').data(entries);
 
@@ -69,7 +47,7 @@ d3.json('/data/entries.json', function(data) {
       .on('mouseout', function() {
         var leftPanel = d3.select('#panel-left')
 
-        leftPanel.select('.title').property('innerHTML','Tyler<br>Wolf')
+        leftPanel.select('.title').property('innerHTML','Tyler Wolf')
         // leftPanel.select('.date').text('')
         leftPanel.select('.explanation').text('')
       })
