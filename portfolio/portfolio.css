@@ -44,6 +44,14 @@ a:hover {
   opacity: 1;
 }
 
+.hidden {
+  display:none;
+}
+
+img.hidden {
+  visibility:hidden;
+}
+
 .main-content-container {
   position:relative;
   width:100%;
@@ -125,4 +133,23 @@ ul.slider-container {
 .selection-description {
     font-size:1.5em;
     margin-bottom:60px;
+}
+
+.loading-container {
+    position:absolute;
+    top:0;
+    left:0;
+    width:75%;
+    height:100%;
+    opacity:0.5;
+    background-color:#fff;
+}
+
+.loading-text {
+  position:relative;
+  display:block;
+  top:300px;
+  left:50%;
+  margin-left:-267px;
+  font-size:10em;
 }

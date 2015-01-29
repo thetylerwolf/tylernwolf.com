@@ -1,42 +1,42 @@
 var portfolio = [{
         title: 'Waiting',
-        path: 'img/waiting.gif',
-        thumb: 'img/thumbs/waiting.png',
+        path: 'waiting.gif',
+        thumb: 'thumbs/waiting.png',
         description: 'Inspired by an Uber.'
     },{
-        title: 'Luxor is Sick',
-        path: 'img/luxor.gif',
-        thumb: 'img/thumbs/luxor.png',
+        title: 'Luxor Feels Sick',
+        path: 'luxor.gif',
+        thumb: 'thumbs/luxor.png',
         description: 'My cat.'
     },{
         title: 'Christmas_1',
-        path: 'img/Christmas_1.gif',
-        thumb: 'img/thumbs/Christmas_1.png',
+        path: 'Christmas_1.gif',
+        thumb: 'thumbs/Christmas_1.png',
         description: 'Christmas trees.'
     },{
         title: 'Noise Cube',
-        path: 'img/noise_cube.gif',
-        thumb: 'img/thumbs/noise_cube.png',
+        path: 'noise_cube.gif',
+        thumb: 'thumbs/noise_cube.png',
         description: 'A 3D noise cube.'
     },{
         title: 'Archipelago Sunset',
-        path: 'img/archipelago_sunset.gif',
-        thumb: 'img/thumbs/archipelago_sunset.png',
+        path: 'archipelago_sunset.gif',
+        thumb: 'thumbs/archipelago_sunset.png',
         description: 'Sunset in the Swedish archipelago.'
     },{
         title: 'Williamsburg Firetruck',
-        path: 'img/wburg_firetruck.gif',
-        thumb: 'img/thumbs/wburg_firetruck.png',
+        path: 'wburg_firetruck.gif',
+        thumb: 'thumbs/wburg_firetruck.png',
         description: 'A firetruck in Williamsburg.'
     },{
         title: 'My First PCB',
-        path: 'img/my_first_pcb.jpg',
-        thumb: 'img/my_first_pcb.jpg',
+        path: 'my_first_pcb.jpg',
+        thumb: 'thumbs/my_first_pcb.jpg',
         description: 'A DC-DC converter.'
     },{
         title: 'My Last PCB',
-        path: 'img/my_last_pcb.jpg',
-        thumb: 'img/my_last_pcb.jpg',
+        path: 'my_last_pcb.jpg',
+        thumb: 'thumbs/my_last_pcb.jpg',
         description: 'An audio amplifier controller.'
     }];
 
@@ -46,13 +46,27 @@ var thumbs = d3.select('.slider-container')
     .selectAll('li.thumbnail')
     .data(portfolio);
 
+var s3 = 'http://media.tylernwolf.com.s3.amazonaws.com/'
+
+var mainImage = document.getElementById('gallery-image');
+
+mainImage.onload = function() {
+    d3.select(this).classed('hidden',false);
+    gallery.select('.loading-container').classed('hidden', true);
+}
+
 thumbs.enter().append('li')
     .attr('class', 'thumbnail')
     .append('img')
-    .attr('src', function(d) { return d.thumb; });
+    .attr('src', function(d) { return s3 + d.thumb; });
 
 thumbs.on('click', function(d) {
-    gallery.select('.selection-image img').attr('src', d.path);
+    if(gallery.select('.selection-image img').attr('src') == s3 + d.path)
+        return;
+
+    gallery.select('.loading-container').classed('hidden', false);
+    gallery.select('.selection-image img').classed('hidden', true);
+    gallery.select('.selection-image img').attr('src', s3 + d.path);
     gallery.select('.selection-image').classed('not-filled', false);
     gallery.select('.selection-title').text(d.title);
     gallery.select('.selection-description').text(d.description);
