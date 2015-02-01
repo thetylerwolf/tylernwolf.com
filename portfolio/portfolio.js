@@ -37,7 +37,7 @@ var portfolio = [{
         title: 'My Last PCB',
         path: 'my_last_pcb.jpg',
         thumb: 'thumbs/my_last_pcb.jpg',
-        description: 'A high-power (6kw) audio amplifier driver.'
+        description: 'A high-power audio amplifier controller.'
     }];
 
 var gallery = d3.select('.gallery-container');
