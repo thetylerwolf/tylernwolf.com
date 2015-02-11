@@ -1,0 +1,52 @@
+#content svg {
+    width:100%;
+    height:500px;
+}
+
+/* Party Calendar */
+
+.day {
+  height:25px;
+  border-width:2px;
+  box-sizing:border-box;
+}
+
+.calendar-wrap {
+  width:80%;
+  height:100%;
+  margin:30px auto;
+}
+
+/* Color Picker */
+.colorPicker {
+  height:200px;
+  width:645px;
+  margin:auto;
+  margin-top:200px;
+  position:relative;
+}
+
+.valueText {
+  width:160px;
+  margin:auto;
+}
+
+.gh-link a {
+  text-decoration:none;
+}
+
+.gh-link {
+  width:160px;
+  margin:auto;
+}
+
+.colorpicker {
+    position:relative;
+    padding-top:100px;
+}
+
+#content.colorpicker svg {
+    display:block;
+    width:710px;
+    margin:auto;
+}

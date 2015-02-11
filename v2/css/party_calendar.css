@@ -9,3 +9,7 @@
   height:100%;
   margin:30px auto;
 }
+
+#gallery-right {
+  overflow:scroll;
+}

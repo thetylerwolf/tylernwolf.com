@@ -1,0 +1,9 @@
+.intro-container {
+    position:relative;
+    height:100%;
+}
+
+.intro-headline {
+    font-size:4em;
+    font-weight:bold;
+}

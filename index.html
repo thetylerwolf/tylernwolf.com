@@ -1,8 +1,90 @@
-<!DOCTYPE html><html><head><meta charset="utf-8" name="viewport"><link rel="stylesheet" type="text/css" href="/css/style.css?v=1"><link rel="stylesheet" type="text/css" href="/css/grid.css?v=1"><script type="text/javascript" src="/lib/d3.v3.js"></script><title>Tyler Wolf</title></head></html><body><div class="main-content-container"><div id="panel-left"><div class="title"><a href="http://www.tylernwolf.com">Tyler Wolf</a></div><div class="description"><div class="entry-title"></div><div class="date"></div><div class="explanation">Hi, I'm Tyler Wolf and I'm a professional User Experience Designer. This website documents some of my personal work and experiments in design and programming. Feel free to e-mail me if you'd like to talk!</div></div></div><div id="gallery-right"><div class="gallery-inner"><div class="entry title">Projects</div><div class="links"></div><div class="contact-info"><a href="http://about.me/tylerwolf" target="_blank">contact</a>&nbsp;/&nbsp;<a href="http://blog.tylernwolf.com" target="_blank">creative blog</a></div></div></div></div></body><script type="text/javascript" src="/js/index.js"></script><script type="text/javascript">var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-37325539-1']);
-_gaq.push(['_trackPageview']);
-(function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();</script>
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="tylerwolf" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="tylerwolf" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="tylerwolf" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="tylerwolf" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tyler Wolf</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/main.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/colorpicker.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/intro.css">
+  <link rel="stylesheet" href="css/creative.css">
+  <link rel="stylesheet" href="css/creative_entry.css">
+  <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  <script src="js/vendor/jquery-1.10.2.min.js"></script>
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/vendor/d3.v3.js"></script>
+  <script src="js/vendor/three.min.js"></script>
+</head>
+<body>
+        <nav class="navbar navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-8">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">Tyler Wolf</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+                  <ul class="nav navbar-nav">
+                    <li><a class="nav-link" href="#/portfolio">Portfolio</a></li>
+                    <!-- <li><a href="#/creative">Creative</a></li> -->
+                    <li><a href="#/about">About</a></li>
+                    <li><a href="#/contact">Contact</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </nav>
+
+    <div class="container" id="app-container">
+
+        <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ng-view></div>
+    </div>
+    
+    <!-- <footer>Copyright 2015 Tyler Wolf</footer> -->
+
+      <!-- In production use:
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+      -->
+      <script src="js/vendor/angular.min.js"></script>
+      <script src="js/vendor/angular-route.min.js"></script>
+      <script src="js/vendor/colorpicker.js"></script>
+      <script src="app.js"></script>
+      <script src="app/entries.js"></script>
+      <script src="app/intro/intro.js"></script>
+      <script src="app/portfolio/portfolio.js"></script>
+      <script src="app/about/about.js"></script>
+      <script src="app/contact/contact.js"></script>
+      <script src="app/creative/creative.js"></script>
+      <script src="app/creative/creative_entry.js"></script>
+
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37325539-1']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+</body>
+</html>

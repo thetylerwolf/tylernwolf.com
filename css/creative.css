@@ -1,0 +1,63 @@
+ul.main-list {
+    padding:0;
+}
+
+ul.main-list li {
+    margin-bottom:1em;
+}
+
+ul.main-list li a {
+    color:#333;
+}
+
+ul.main-list li a:hover {
+    text-decoration:none;
+}
+
+ul.main-list li .entry-description {
+    position:absolute;
+    margin-left:4px;
+    color:#888;
+    font-size:0.33em;
+    opacity:0;
+    overflow:hidden;
+    visibility: hidden;
+    transition:opacity 0.5s ease-in-out 0.5s;
+}
+
+ul.main-list li:hover .entry-description {
+    visibility:visible;
+    opacity:1;
+}
+
+ul.main-list span {
+    font-size:0.5em;  
+    color:#888;
+}
+
+.projects-main {
+    position:relative;
+    left:106px;
+}
+
+.projects-main .page-title {
+    margin-left:-106px;
+    margin-bottom:1em;
+}
+
+.projects-main li {
+    list-style:none;
+    font-size:3em;
+}
+
+.main-canvas {
+    position:absolute;
+    left:0;
+    right:0;
+    height:100%;
+    width:100%;
+}
+
+.main-container {
+    position:relative;
+}

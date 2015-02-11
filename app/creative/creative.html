@@ -1,0 +1,14 @@
+<div class="main-container">
+    <canvas class="main-canvas"></canvas>
+    <div class="projects-main">
+        <h1 class="page-title">Creative Work</h1>
+        <ul class="main-list">
+            <li ng-repeat="entry in entries" ng-mouseenter="enter($event)" ng-mouseleave="leave($event)">
+                <a href="{{entry.url}}">{{ entry.title }}
+                    <span class="glyphicon glyphicon-new-window" ng-if="entry.external"></span>
+                </a>
+                <div class="entry-description">{{entry.description}}</div>
+            </li>
+        </ul>
+    </div>
+</div>
