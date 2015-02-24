@@ -11,6 +11,7 @@ angular.module('tylerwolf.creative', ['ngRoute'])
 
 .controller('creativeCtrl', ['$scope', 'entries', function($scope, entries) {
     $scope.entries = entries;
+    if(window.leftInt) $interval.cancel(window.leftInt)
 
     $scope.enter = function($event) {
         render.stop = false;

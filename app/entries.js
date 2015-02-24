@@ -1,4 +1,4 @@
-angular.module('tylerwolf').factory('entries', function entriesFactory() {
+angular.module('tylerwolf').factory('entries',['$interval', function entriesFactory($interval) {
     return [
             {
               date: "12/2/14",
@@ -168,10 +168,9 @@ angular.module('tylerwolf').factory('entries', function entriesFactory() {
                       .remove();
 
                     move();
-                    setTimeout(tunnel, 300 * (1 + baseRate/11));
                 };
 
-                tunnel();
+                return $interval(tunnel, 300 * (1 + baseRate/11));
               }
             },
             {
@@ -274,9 +273,6 @@ angular.module('tylerwolf').factory('entries', function entriesFactory() {
               //================================================================================    
 
               function redraw(newData) {
-
-
-
                 tops = newData.sort(function(a, b) { return b.value - a.value;}).slice(0,leaders);
 
                 var rect = list.selectAll("rect")
@@ -363,15 +359,15 @@ angular.module('tylerwolf').factory('entries', function entriesFactory() {
 
               }
 
-              setInterval(function() {
+              return $interval(function() {
                 //d = [];
-              for (i = 0; i < 15 ; i++) {
-                d[i].value = (parseFloat(d[i].value) + Math.random()*100).toFixed(0);
-              }
-              indColor();
-              redraw(d);
-              }, 2000);
+                for (i = 0; i < 15 ; i++) {
+                  d[i].value = (parseFloat(d[i].value) + Math.random()*100).toFixed(0);
+                }
+                indColor();
+                redraw(d);
+                }, 2000);
               }
             }
         ];
-});
+}]);

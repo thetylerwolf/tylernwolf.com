@@ -48,6 +48,10 @@ footer {
     background-color:#333;
 }
 
+.navbar .icon-bar {
+    background-color:#fff;
+}
+
 .navbar-nav li a {
     /*color:#000;*/
     color:#aaa;
@@ -91,4 +95,19 @@ footer {
 
 .portfolio-container .img-description {
     text-align:center;
+}
+
+.port-section {
+    margin-bottom:1em;
+}
+
+.port-section h2 {
+    color:#337ab7;
+    cursor:pointer;
+    display:inline;
+}
+
+.port-section .glyphicon {
+    font-size:1.3em;
+    margin-left:0.5em;
 }
