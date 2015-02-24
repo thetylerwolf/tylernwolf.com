@@ -13,8 +13,8 @@ angular.module('tylerwolf.portfolio', ['ngRoute'])
     var showMe = 'twport!';
     var user = '';
 
-    // user = window.prompt('Enter password');
-    user = 'twport!';
+    user = window.prompt('Enter password');
+    // user = 'twport!';
 
     if(user == showMe) {
         $scope.show = true;
