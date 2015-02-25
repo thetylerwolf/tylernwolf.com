@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tylerwolf.portfolio', ['ngRoute'])
+angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/portfolio', {

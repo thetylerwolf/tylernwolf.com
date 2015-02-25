@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tylerwolf.entry', ['ngRoute'])
+angular.module('tylerwolf.entry', ['ngRoute', 'analytics'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/creative/:id', {

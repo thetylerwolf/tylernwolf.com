@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('tylerwolf.contact', ['ngRoute'])
+angular.module('tylerwolf.contact', ['ngRoute', 'analytics'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/contact', {
