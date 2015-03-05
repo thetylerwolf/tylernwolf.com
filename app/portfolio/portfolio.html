@@ -3,11 +3,11 @@
     <div ng-if="show">
         <h1 class="page-title">Portfolio</h1>
         <div class="row port-section">
-            <div class="col-xs-9" ng-click="toggleSection('heatmap')">
-                <h2>Novus</h2><i class="glyphicon" ng-class="showClass('heatmap')"></i>
+            <div class="col-xs-9" ng-click="toggleSection('novus')">
+                <h2>Novus</h2><i class="glyphicon" ng-class="showClass('novus')"></i>
             </div>
         </div>
-        <div class="row heatmap" ng-if="showing('heatmap')">
+        <div class="row novus" ng-if="showing('novus')">
             <div class="col-xs-9">
                 <h3>Description</h3>
                 <p>Novus is a financial analytics platform for Institutional investors (hedge funds, fund-of-funds, etc.) The platform provides analytics and risk metrics across a user's entire investment portfolio down to the position level.</p>
@@ -19,6 +19,18 @@
                 <p class="img-description">Novus</p>
                 <img src="http://media.tylernwolf.com.s3.amazonaws.com/portfolio/novus_2.png">
                 <p class="img-description">Data visualization</p>
+            </div>
+        </div>
+        <div class="row port-section">
+            <div class="col-xs-9" ng-click="toggleSection('nvd3')">
+                <h2>nvd3 (code)</h2><i class="glyphicon" ng-class="showClass('nvd3')"></i>
+            </div>
+        </div>
+        <div class="row nvd3" ng-if="showing('nvd3')">
+            <div class="col-xs-9">
+                <h3>Description</h3>
+                <p>A wrapper library for d3 that simplifies building charts without removing the flexibility of the d3 library. I have maintained this library for more than two years.</p>
+                <p>This library has been starred more than 3,000 times on Github and forked more than 1,000 times. You can see the latest version <a href="https://github.com/novus/nvd3">here</a></p>
             </div>
         </div>
         <div class="row port-section">
@@ -77,6 +89,17 @@
             </div>
         </div>
         <div class="row port-section">
+            <div class="col-xs-9" ng-click="toggleSection('datagen')">
+                <h2>Sketch Financial Data Generator (code/tool)</h2><i class="glyphicon" ng-class="showClass('datagen')"></i>
+            </div>
+        </div>
+        <div class="row datagen" ng-if="showing('datagen')">
+            <div class="col-xs-9">
+                <h3>Description</h3>
+                <p>A Sketch plugin I developed that generates columns of dummy data for data tables and dummy line and bar charts. The plugin was developed with financial applications in mind, but it works great for other applications.</p><p>The plugin is steadily growing a user base. You can see the latest version <a href="https://github.com/thetylerwolf/sketchfindatagen">here</a></p>
+            </div>
+        </div>
+        <div class="row port-section">
             <div class="col-xs-9" ng-click="toggleSection('swarm')">
                 <h2>Swarm 2048</h2><i class="glyphicon" ng-class="showClass('swarm')"></i>
             </div>
@@ -85,6 +108,7 @@
             <div class="col-xs-9">
                 <h3>Requirements</h3>
                 <p>A retro-futuristic multiplayer version of the popular game 2048.</p>
+                <p>A playable version will be available soon!</p>
             </div>
             <div class="col-xs-9">
                 <h3>Wireframe</h3>

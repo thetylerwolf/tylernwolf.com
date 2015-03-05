@@ -1,13 +1,6 @@
 angular.module('tylerwolf').factory('entries',['$interval', function entriesFactory($interval) {
     return [
             {
-              date: "12/2/14",
-              title: "Data Generator Sketch Plugin",
-              description: "A plugin for Sketch that generates dummy data and charts",
-              url:"https://github.com/thetylerwolf/sketchfindatagen",
-              external: true
-            },
-            {
               date: "2/22/14",
               title: "Jade/Stylus Bootstrap",
               description: "Gruntfile and npm package to get a jade/stylus-based project up and running",
