@@ -111,3 +111,38 @@ footer {
     font-size:1.3em;
     margin-left:0.5em;
 }
+
+ul.social-links {
+    display:inline;
+}
+
+.social-links li {
+    list-style:none;
+    float:left;
+}
+
+.social-links a {
+    padding-right:0.3em;
+    opacity:0.85;
+}
+
+.social-links a span {
+    display:none;
+}
+
+.social-links a i {
+    opacity:1;
+}
+
+.social-links a:hover {
+    text-decoration:none;
+    opacity:1;
+}
+
+.social-links a:hover span {
+    opacity:1;
+}
+
+.contact-list-header {
+    font-size:2em;
+}

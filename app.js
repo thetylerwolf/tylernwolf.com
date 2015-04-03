@@ -6,7 +6,6 @@ angular.module('tylerwolf', [
   'tylerwolf.intro',
   'tylerwolf.portfolio',
   'tylerwolf.about',
-  'tylerwolf.contact',
   'tylerwolf.creative',
   'tylerwolf.entry',
   'analytics'
