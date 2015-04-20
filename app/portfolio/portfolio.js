@@ -11,9 +11,9 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
 
 .controller('portfolioCtrl', ['$scope', function($scope) {
     var showMe = 'twport!';
-    var user = '';
-
-    user = window.prompt('Enter password');
+    // var user = '';
+    var user = 'twport!';
+    // user = window.prompt('Enter password');
     // user = 'twport!';
 
     if(user == showMe) {
