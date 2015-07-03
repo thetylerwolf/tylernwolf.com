@@ -8,6 +8,7 @@ angular.module('tylerwolf', [
   'tylerwolf.about',
   'tylerwolf.creative',
   'tylerwolf.entry',
+  'tylerwolf.datastudio',
   'analytics'
 ])
 .config(['$routeProvider', function($routeProvider) {
