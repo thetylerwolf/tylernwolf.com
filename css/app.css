@@ -65,17 +65,17 @@ footer {
 }
 
 .navbar-nav li.active a {
-    color:#1dbf6e;
+    color:#0ABE78;
 }
 
 .navbar-brand:hover {
-  color: #1dbf6e;
+  color:#0ABE78;
   background-color: #fff !important;
 }
 
 .navbar-nav a:hover,
 .navbar-nav a:focus {
-  color: #1dbf6e;
+  color:#0ABE78;
   background-color: #fff !important;
 }
 

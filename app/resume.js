@@ -5,7 +5,7 @@ angular.module('tylerwolf').factory('Resume',[function resumeFactory() {
             'position': 'UX Designer',
             'website': 'http://www.novus.com',
             'startDate': '6/20/12',
-            'endDate': 'present',
+            'endDate': '5/8/15',
             'summary': '',
             'highlights': [
               ''
