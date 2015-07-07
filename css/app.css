@@ -41,42 +41,42 @@ footer {
     font-family: 'alte_din_1451_mittelschriftRg', sans-serif;
     text-decoration:underline;
     /*color:#000;*/
-    color:#fff;
+    color:#1a1a1a;
+    transition:color 0.3s;
 }
 
 .navbar {
-    background-color:#333;
+    background-color:#fff;
 }
 
 .navbar .icon-bar {
-    background-color:#fff;
+    background-color:#1a1a1a;
 }
 
 .navbar-nav li a {
     /*color:#000;*/
-    color:#aaa;
+    color:#1a1a1a;
     transition:color 0.3s;
     text-shadow: none;
 }
 
 .navbar-nav li.active {
-    background-color:#333;
+    background-color:#fff;
 }
 
 .navbar-nav li.active a {
-    color:#fff;
+    color:#1dbf6e;
 }
 
-.navbar-brand:hover,
-.navbar-brand:focus {
-  color: #fff;
-  background-color: #333 !important;
+.navbar-brand:hover {
+  color: #1dbf6e;
+  background-color: #fff !important;
 }
 
 .navbar-nav a:hover,
 .navbar-nav a:focus {
-  color: #fff;
-  background-color: #333 !important;
+  color: #1dbf6e;
+  background-color: #fff !important;
 }
 
 .page-title {
@@ -146,3 +146,9 @@ ul.social-links {
 .contact-list-header {
     font-size:2em;
 }
+
+.section-header {
+    color:#1dbf6e;
+}
+
+@media (min-width: 1024px) { .container { max-width: 980px; } }

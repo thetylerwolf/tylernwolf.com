@@ -10,5 +10,8 @@ angular.module('tylerwolf.intro', ['ngRoute'])
 }])
 
 .controller('introCtrl', ['$scope', function($scope) {
-
+    var navLi = document.getElementsByClassName('navbar-nav')[0].children;
+    [].forEach.call(navLi, function(d) {
+        d.className = '';
+    });
 }]);
