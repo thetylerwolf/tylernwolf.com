@@ -82,12 +82,12 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
         title: 'The Garden for Cardboard',
         types: ['design','software'],
         thumbnail: 'thegarden_thumbnail.png',
-        id: '2048'
+        id: 'thegarden'
     },{
         title: 'tylernwolf.com',
         types: ['ux','design','software'],
         thumbnail: 'tylernwolf_thumbnail.png',
-        id: '2048'
+        id: 'tylernwolf'
     },{
         title: '2048',
         types: ['design','software'],
