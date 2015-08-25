@@ -87,30 +87,6 @@ footer {
 .content-text {
     margin-top:4em;
 }
-.portfolio-container img {
-    width: 100%;
-    margin: 20px auto;
-    display: block;
-}
-
-.portfolio-container .img-description {
-    text-align:center;
-}
-
-.port-section {
-    margin-bottom:1em;
-}
-
-.port-section h2 {
-    color:#337ab7;
-    cursor:pointer;
-    display:inline;
-}
-
-.port-section .glyphicon {
-    font-size:1.3em;
-    margin-left:0.5em;
-}
 
 ul.social-links {
     display:inline;

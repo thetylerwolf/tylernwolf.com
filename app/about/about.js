@@ -13,16 +13,16 @@ angular.module('tylerwolf.about', ['ngRoute', 'analytics'])
 
 }])
 
-.directive('twResume', ['Resume', function(Resume) {
-    return {
-        scope: {},
-        restrict: 'AE',
-        template: '<svg/>',
-        controller: function() {
-            d3.select('svg')
-                .attr('width','100%')
-                .attr('height','500px')
-                ;
-        }
-    };
-}]);
+// .directive('twResume', ['Resume', function(Resume) {
+//     return {
+//         scope: {},
+//         restrict: 'AE',
+//         template: '<svg/>',
+//         controller: function() {
+//             d3.select('svg')
+//                 .attr('width','100%')
+//                 .attr('height','500px')
+//                 ;
+//         }
+//     };
+// }]);
