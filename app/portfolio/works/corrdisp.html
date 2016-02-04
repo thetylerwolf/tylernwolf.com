@@ -1,0 +1,72 @@
+
+<style>
+
+  .container {
+    font-family:sans-serif;
+    width:1000px !important;
+    margin:auto;
+  }
+
+  svg {
+    margin-top:25px;
+    width:1000px;
+    height:540px;
+    background-color:#fff;
+  }
+
+  svg text {
+    font-family:sans-serif;
+    font-size:11px;
+  }
+
+  .x-axis path,
+  .x-axis line,
+  .z-line line,
+  .y-axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .scatter-wrap .x-axis .tick,
+  .scatter-wrap .y-axis .tick {
+    opacity:0 !important;
+  }
+
+  .scatter-points .point {
+    transition: stroke-width 0.2s;
+  }
+
+  .line-wrap text {
+    font-size:12px;
+  }
+
+  .text-wrap text {
+    font-size:16px;
+  }
+
+</style>
+<div class="row">
+  <div class="col-xs-12">
+    <section class="explanation">
+      <h3>Alpha vs. Correlation/Dispersion</h3>
+      <p>The top three charts on the left display Alpha over time for a Fund, Hedge Fund Index A (IDX A) and Hedge Fund Index B (IDX B), respectively. At the bottom is the correlation and dispersion plotted over the same time period. On the right, a scatter plot shows the average Alpha for the three candidates in given market conditions (high/low correlation in combination with high/low dispersion). In the bottom right are the details of the currently focused&nbsp;data point.
+      <br>
+      <br>
+      To focus on a data point, either in the bar charts or the scatter plot, mouse over the data point - the other charts will highlight the corresponding point and the detail section will update with the corresponding&nbsp;numbers. <a href="https://github.com/thetylerwolf/financialviz">See it on github</a></p>
+    </section>
+  </div>
+  <div class="col-xs-12">
+    <svg id="chart-container">
+      <a xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="http://www.tylernwolf.com/" target="_blank"><text x="0" y="537" fill="#aaa">Interactive graphic by Tyler Wolf</text></a>
+    </svg>
+  </div>
+</div>
+<script src="js/finviz_controllers.js"></script>
+<script>
+  var chartData;
+  d3.json('data/finviz_data.json', function(data) {
+    chartData = data;
+    buildChart(data);
+  });
+</script>

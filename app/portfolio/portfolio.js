@@ -13,7 +13,7 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
 }])
 
 .controller('portfolioCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
-    /* 
+    /*
     //Password protect section
     var showMe = 'twport!';
     var user = '';
@@ -79,6 +79,11 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
     };
 
     $scope.works = [{
+        title: 'Correlation-Dispersion Data Visualization',
+        types: ['design','software', 'dataviz'],
+        thumbnail: 'corrdisp_viz.png',
+        id: 'corrdisp'
+    },{
         title: 'The Garden for Cardboard',
         types: ['design','software'],
         thumbnail: 'thegarden_thumbnail.png',
@@ -123,7 +128,7 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
 }])
 
 .controller('workCtrl', ['$scope', '$routeParams', function($scope, $routeParams) {
-    
+
 }])
 .directive('twWork', ['$routeParams', function($routeParams) {
     return {
