@@ -84,6 +84,11 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
         thumbnail: 'corrdisp_viz.png',
         id: 'corrdisp'
     },{
+        title: 'E*Trade Financial',
+        types: ['design', 'ux'],
+        thumbnail: 'etrade_thumbnail.png',
+        id: 'etrade'
+    },{
         title: 'The Garden for Cardboard',
         types: ['design','software'],
         thumbnail: 'thegarden_thumbnail.png',
