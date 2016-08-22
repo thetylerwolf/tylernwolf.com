@@ -14,7 +14,7 @@ angular.module('tylerwolf', [
   $routeProvider.otherwise({redirectTo: '/'});
 
 }])
-.run(['analytics', function(analytics) {
+.run(function(analytics) {
 
   var navLi = document.getElementsByClassName('navbar-nav')[0].children;
   [].forEach.call(navLi, function(d) {
@@ -24,10 +24,10 @@ angular.module('tylerwolf', [
         })
 
         this.className = 'active';
-        
+
     };
   });
-}]);
+});
 
 angular.module('analytics', ['ng']).service('analytics', [
   '$rootScope', '$window', '$location', function($rootScope, $window, $location) {
