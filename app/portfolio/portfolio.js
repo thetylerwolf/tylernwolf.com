@@ -13,21 +13,6 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
 }])
 
 .controller('portfolioCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
-    /*
-    //Password protect section
-    var showMe = 'twport!';
-    var user = '';
-    var user = 'twport!';
-    user = window.prompt('Enter password');
-    user = 'twport!';
-
-    if(user == showMe) {
-        $scope.show = true;
-    } else {
-        $scope.hide = true;
-    }
-    */
-
     $scope.show = true;
 
     $scope.filters = $rootScope.filters || [{
