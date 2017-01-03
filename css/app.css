@@ -19,6 +19,7 @@ body {
     font-family: 'Open sans', sans-serif;
     min-height:100%;
     overflow-x:hidden;
+    padding-bottom: 60px;
 }
 
 footer {
