@@ -66,7 +66,7 @@ angular.module('tylerwolf.portfolio', ['ngRoute', 'analytics'])
     $scope.works = [{
         title: 'Top UX Words of 2016',
         types: ['design','software', 'dataviz'],
-        thumbnail: 'ux_words.png',
+        thumbnail: 'uxwords_thumbnail.png',
         id: 'uxwords'
     },{
         title: 'Correlation-Dispersion Data Visualization',

@@ -128,3 +128,20 @@ ul.social-links {
 }
 
 @media (min-width: 1024px) { .container { max-width: 980px; } }
+
+.input-right-container {
+    float:right;
+}
+
+input {
+    border:1px solid #1a1a1a;
+    border-radius:3px;
+    padding:3px 5px;
+}
+
+button {
+    background-color:#0ABE78;
+    color:#fff;
+    border:1px solid #0ABE78;
+    border-radius:3px;
+}

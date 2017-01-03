@@ -7,6 +7,10 @@
                 width:960px;
             }
 
+            #chart a:hover {
+                text-decoration:none;
+            }
+
             .node circle {
                 opacity:0.7;
                 fill: #ff5533;
@@ -17,6 +21,12 @@
                 fill: black;
                 stroke: none;
             }
+
+            .node .label {
+                /*font-family:Times;*/
+                font-weight:100;
+            }
+
             .node .count {
                 font-family:sans-serif;
             }
@@ -29,15 +39,52 @@
                 opacity:1.0;
             }
 
+            .selected .word {
+                font-size:2em;
+            }
+
+            .selected .count {
+                float:right;
+            }
+
         </style>
 	</head>
 	<body>
-        <input type="text" id="word-input"><button id="word-button">Add</button>
-        <svg id="chart"></svg>
-        <div class="selected">
-            <div class="word"></div>
-            <div class="articles"></div>
+    <div class="row">
+        <div class="col-xs-12">
+
+            <section class="explanation">
+                <h3>Top UX Words of 2016</h3>
+                <p>A spatial comparison of frequently used words in <a href="https://medium.com/@kennycheny/the-best-user-experience-design-links-of-2016-46e472660a52?ref=tylernwolf">"The Best User Experience Links of 2016"</a>, a list of 50 articles related to User Experience design curated by Kenny Chen for <a href="https://twitter.com/uxdesignweekly?ref=tylernwolf">UX Design Weekly</a>. This visualization was inspired by trends in UX design in order to answer the question of whether or not those trends are cyclical catchphrases or if there is real value behind them. The answer to this question is left to the reader.</p>
+                <br>
+                <p>Each bubble represents a word. The size of the bubble corresponds to the number of times the associated word was found across all 50 articles. To learn more about where a word is used, click on the word bubble to see a list of articles and how many times the word appears in each. To add a word for comparison, enter the word in the input box above the visualization and press "enter" or click "Add".</p>
+                <br>
+                <p>The articles were compiled, then processed for the number of occurrences of each word using some simple node.js scripts. The visualization was written in d3.js. Inspired by the work of <a href="https://bost.ocks.org/mike/">Mike Bostock</a>, with help from <a href="http://vallandingham.me/">Jim Vallandingham's</a> great tutorials.</p></p>
+                <br>
+            </section>
+
+        <div class="col-xs-12">
+
+            <div class="input-container input-right-container">
+                <input class="input input-right" type="text" id="word-input" placeholder="Enter a word to add">
+                <button id="word-button">Add</button>
+            </div>
+
         </div>
+
+        <div class="col-xs-12">
+            <svg id="chart"></svg>
+        </div>
+
+        <div class="col-xs-12">
+
+            <div class="selected">
+                <div class="word"></div>
+                <div class="articles"></div>
+            </div>
+
+        </div>
+    </div>
 	</body>
-	<script src="bundle.js"></script>
+	<script src="js/ux_word_controller.js"></script>
 </html>
