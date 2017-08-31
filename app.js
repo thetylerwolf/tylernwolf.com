@@ -6,8 +6,8 @@ angular.module('tylerwolf', [
   'tylerwolf.intro',
   'tylerwolf.portfolio',
   'tylerwolf.about',
-  'tylerwolf.creative',
-  'tylerwolf.entry',
+  // 'tylerwolf.creative',
+  // 'tylerwolf.entry',
   'analytics'
 ])
 .config(['$routeProvider', function($routeProvider) {
